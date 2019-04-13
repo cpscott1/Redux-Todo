@@ -7,7 +7,6 @@ class TodoList extends Component {
   state = {
     newTodo: ''
   }
-}
 
 changeHandler = event => {
   this.setState({
@@ -34,7 +33,7 @@ render() {
             {todo.value}
             {todo.completed}
           </h4>
-        )}
+        ))}
       </div>
       <input
         type='text'
@@ -46,10 +45,11 @@ render() {
     </>
   )
 }
+}
 
 const mapStateToProps = state => ({
-  todos: state.todosReducer.todos
-})
+  todos: state.todos
+});
 
 export default connect(
   mapStateToProps,
