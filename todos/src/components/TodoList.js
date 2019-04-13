@@ -31,10 +31,18 @@ render() {
       <div className='todo-list'>
         {this.props.todos.map((todo, index) => (
           <h4 onClick={event => this.toggleTodo(event, index)} key={index}>
-          
+            {todo.value}
+            {todo.completed}
           </h4>
         )}
       </div>
+      <input
+        type='text'
+        value={this.state.newTodo}
+        onChange={this.changeHandler}
+        placeholder="Add new todo"
+      />
+      <button onClick={this.addTodo}>Add Todo</button>
     </>
   )
 }

@@ -19,7 +19,7 @@ export const todosReducer = (state = initialState, action) => {
       return {
         ...state,
         todos: state.todos.map((todo, index) =>
-          action.payload === index ? {...todos, completed: !todo.completed}
+          action.payload === index ? {...todo, completed: !todo.completed}
           : todo
       )
       }
